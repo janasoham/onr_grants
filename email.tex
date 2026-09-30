@@ -1,0 +1,82 @@
+\documentclass[11pt,a4paper]{article}
+
+% --- Packages ---
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+
+% --- Color Definitions ---
+\definecolor{navyblue}{RGB}{0,32,96}
+\definecolor{darkgray}{RGB}{60,60,60}
+
+% --- Hyperlink Setup ---
+\hypersetup{
+    colorlinks=true,
+    linkcolor=navyblue,
+    urlcolor=navyblue
+}
+
+% --- Section Formatting ---
+\titleformat{\section}{\color{navyblue}\large\bfseries}{}{0em}{}[\color{navyblue}\titlerule]
+\titlespacing*{\section}{0pt}{8pt}{4pt}
+
+\setlist[itemize]{leftmargin=1.5em, itemsep=2pt, topsep=2pt}
+
+% --- Document ---
+\begin{document}
+
+\pagestyle{empty} % Single-page document, suppress page numbers
+
+% Header
+\begin{center}
+    {\LARGE \bfseries \color{navyblue} Minimax Theory \& Robust Clustering Estimators for Coherent Scene Understanding} \\[0.4em]
+    {\large \textbf{Executive Summary / Pre-Proposal Inquiry}} \\[0.3em]
+    \textbf{Program:} ONR Code 311 (Mathematical and Data Sciences) --- Automated Image Understanding \\
+    \textbf{PI:} Dr. Soham Jana, Assistant Professor (\href{mailto:sjana@nd.edu}{sjana@nd.edu}) \\
+    Department of Applied and Computational Mathematics and Statistics (ACMS), University of Notre Dame \\
+    \href{https://janasoham.github.io/}{janasoham.github.io}
+\end{center}
+
+\vspace{-0.5em}
+
+\section*{1. Motivation \& DoD Relevance}
+Automated perception and decision-making systems operating in Naval environments face extreme noise, coherent speckle, partial occlusion, and adversarial disruption. Standard computer vision heuristics and deep network models lack formal finite-sample guarantees, leading to high error rates under heavy-tailed or dynamic noise. This project bridges mathematical statistics and visual perception by framing image understanding as a non-asymptotic estimation problem on high-dimensional graphs, establishing optimal recovery limits for complex scene structures.
+
+\section*{2. Theoretical Innovations \& Methodology}
+Our framework delivers mathematically rigorous, computationally efficient estimators for image segmentation, scene graph parsing, and multi-sensor data fusion:
+\begin{itemize}
+    \item \textbf{Non-Asymptotic Minimax Guarantees:} Establishing finite-sample minimax risk bounds for graph-based image estimation, providing provable limits on target recovery.
+    \item \textbf{Adversarial \& Heavy-Tailed Robustness:} Formulating distance-based and spectral clustering estimators that maintain stability under corrupted observation graphs, missing edges, and heavy-tailed speckle noise.
+    \item \textbf{Computational Scalability:} Translating high-dimensional matrix and graph estimation into fast $O(N \log N)$ algorithms suitable for real-time scene partitioning.
+\end{itemize}
+
+\section*{3. System Architecture \& Pipeline}
+\begin{figure}[h!]
+    \centering
+    % Replace the box below with your graphic file: \includegraphics[width=0.92\textwidth]{pipeline.pdf}
+    \framebox[\textwidth][c]{\rule{0pt}{1.2in} \color{darkgray}\small [ Visual Pipeline Diagram: Raw Noisy Stream $\rightarrow$ High-Dim Graph $\rightarrow$ Robust Estimator $\rightarrow$ Provable Recovery ]}
+    \caption{\small Proposed estimation pipeline mapping raw spatial/spectral data to provably robust scene understandings.}
+\end{figure}
+
+\vspace{-1em}
+
+\section*{4. Projected Deliverables \& Scope}
+\begin{itemize}
+    \item \textbf{Theoretical Foundations:} Unified minimax bounds for community detection and non-parametric estimation in dynamic visual graphs.
+    \item \textbf{Algorithmic Suite:} Open-source, scalable algorithms for robust clustering under corrupted or incomplete image data.
+    \item \textbf{Validation:} Benchmark evaluation on high-density spatial arrays and coherent imaging datasets.
+\end{itemize}
+
+\section*{5. Proposed Effort \& Budget Scale}
+\begin{itemize}
+    \item \textbf{Duration:} 3 Years (Target Start: Fall 2027)
+    \item \textbf{Estimated Budget:} $\sim \$150,000$ -- $\$180,000$ / year (Supports 1 Ph.D. Student, PI summer effort, and conference travel).
+\end{itemize}
+
+\end{document}
